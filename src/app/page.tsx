@@ -1,69 +1,67 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+    <main className="page">
+      <div className="atmosphere" aria-hidden="true" />
+
+      <header className="top">
+        <p className="brand">Órbita Código</p>
+        <nav className="nav">
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </header>
+
+      <section className="hero">
+        <p className="brand-hero">Órbita Código</p>
+        <h1>Software que pone tu negocio en órbita</h1>
+        <p className="lead">
+          Webs, sistemas y automatización para PYMES que necesitan resultados,
+          no solo una página bonita.
+        </p>
+        <div className="cta">
+          <a className="btn-primary" href="#contacto">
+            Hablar de tu proyecto
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a className="btn-secondary" href="#servicios">
+            Ver servicios
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="servicios" className="section">
+        <h2>Servicios</h2>
+        <p className="section-lead">
+          Tres formas de ayudarte a digitalizar y ordenar tu operación.
+        </p>
+        <ul className="services">
+          <li>
+            <h3>Presencia web</h3>
+            <p>Sitio claro, rápido y orientado a conseguir contactos.</p>
+          </li>
+          <li>
+            <h3>Sistemas a medida</h3>
+            <p>Cotizaciones, pedidos, inventario o flujos que hoy viven en Excel.</p>
+          </li>
+          <li>
+            <h3>Automatización</h3>
+            <p>Conectamos herramientas para que dejes de copiar datos a mano.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contacto" className="section">
+        <h2>Contacto</h2>
+        <p className="section-lead">
+          Cuéntame qué necesitas y armamos el siguiente paso.
+        </p>
+        <a className="btn-primary" href="mailto:hola@orbitacodigo.com">
+          Escribir por email
+        </a>
+      </section>
+
+      <footer className="footer">
+        <p>© 2026 Órbita Código</p>
+      </footer>
+    </main>
   );
 }
